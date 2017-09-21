@@ -525,7 +525,7 @@ class Line(object):
           :rtype: Line:
         """
         # --------------------------------------------------------------
-        # TODO: 9.
+        # Done: 9.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -533,6 +533,10 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
+
+        temp = self.start.plus(other_line.start)
+        temp1 = self.end.plus(other_line.end)
+        return Line(temp, temp1)
 
     def line_minus(self, other_line):
         """
