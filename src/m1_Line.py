@@ -669,6 +669,13 @@ class Line(object):
         # are different from each other.
         ################################################################
 
+        
+
+        if self.is_parallel(line2) == True:
+            return True
+        else:
+            return False
+
     def reset(self):
         """
         What comes in:
