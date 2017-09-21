@@ -669,7 +669,7 @@ class Line(object):
         # are different from each other.
         ################################################################
 
-        
+
 
         if self.is_parallel(line2) == True:
             return True
