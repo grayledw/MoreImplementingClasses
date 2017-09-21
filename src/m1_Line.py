@@ -228,6 +228,7 @@ class Line(object):
 
         self.start = start.clone()
         self.end = end.clone()
+        self.total = 0
 
     def __repr__(self):
         """
@@ -337,7 +338,10 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
+
+        self.total = self.total + 1
         return Line(self.start, self.end)
+
 
     def reverse(self):
         """
@@ -485,7 +489,7 @@ class Line(object):
           :rtype: int:
         """
         # --------------------------------------------------------------
-        # TODO: 8.
+        # Done: 8.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -493,6 +497,8 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
+
+        return self.total
 
     def line_plus(self, other_line):
         """
