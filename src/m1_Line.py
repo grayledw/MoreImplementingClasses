@@ -669,12 +669,14 @@ class Line(object):
         # are different from each other.
         ################################################################
 
+        slope1 = self.slope()
+        slope2 = line2.slope()
 
-
-        if self.is_parallel(line2) == True:
+        if slope1 == slope2:
             return True
         else:
             return False
+
 
     def reset(self):
         """
