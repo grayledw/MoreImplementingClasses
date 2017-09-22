@@ -229,6 +229,8 @@ class Line(object):
         self.start = start.clone()
         self.end = end.clone()
         self.total = 0
+        self.start_original = self.start
+        self.end_original = self.end
 
     def __repr__(self):
         """
@@ -634,7 +636,7 @@ class Line(object):
           :rtype: bool
         """
         # --------------------------------------------------------------
-        # TODO: 12.
+        # Done: 12.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -708,7 +710,7 @@ class Line(object):
             print(line2)  # Should print: Line[(0, 1), (10, 20)]
         """
         # --------------------------------------------------------------
-        # TODO: 13.
+        # Done: 13.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -716,6 +718,10 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
+
+
+        self.start = self.start_original
+        self.end = self.end_original
 
 
 ########################################################################
